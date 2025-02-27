@@ -62,4 +62,4 @@ This service is a frontend application that interacts with planboard-api for tas
 ## **API Documentation**
 
 You can test the API using Swagger:
-`http://localhost:8080/swagger-ui/index.html`
+`http://94.241.171.153:8080/swagger-ui/index.html`
