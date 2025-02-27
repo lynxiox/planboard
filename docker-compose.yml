@@ -110,21 +110,16 @@ services:
       retries: 5
 
   planboard-frontend:
-    image: lynxiox/planboard-frontend:latest
+    image: lynxiox/planboard-front:latest
     restart: unless-stopped
     env_file:
       - secret.env
     depends_on:
       - planboard-api
     ports:
-      - '3000:3000'
+      - '80:80'
     networks:
       - planboard-network
-    healthcheck:
-      test: [ "CMD-SHELL", "curl -f http://localhost:3000/health || exit 1" ]
-      interval: 30s
-      timeout: 10s
-      retries: 5
 
 volumes:
   postgres:
